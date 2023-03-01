@@ -13,7 +13,7 @@ const dbConfig = require('./config/dbConfig')
 app.use(cors({
     origin: 'https://event-management-rahii04.netlify.app'
   }));
-  
+
 app.use(express.json());
 
 // //created end point connecting
@@ -34,6 +34,7 @@ const port = process.env.PORT || 5000;
 
 //testing purpose for the below
 app.get('/',(req,res)=>{
+    res.header('Access-Control-Allow-Origin', 'https://event-management-rahii04.netlify.app');
     res.status(201).json("server start")
 });
 
