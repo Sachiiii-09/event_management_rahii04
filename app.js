@@ -10,7 +10,10 @@ const cors = require('cors')
 const dbConfig = require('./config/dbConfig')
 
 // //de structure the json from front end
-app.use(cors());
+app.use(cors({
+    origin: 'https://event-management-rahii04.netlify.app'
+  }));
+  
 app.use(express.json());
 
 // //created end point connecting
